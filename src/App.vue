@@ -26,7 +26,7 @@
       <p class="messages">
         Messages:
       </p>
-        <div class="card-2" v-for="message in messages">
+        <div class="card-2" ref='messageDisplay' v-for="message in messages">
           <h3><strong>{{message.username}}</strong></h3>
           <p>{{message.text}}</p>
         </div>
