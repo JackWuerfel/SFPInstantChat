@@ -1,6 +1,6 @@
-# livechat
+# Seven Figure Publishing Live Chat
 
-> A Vue.js project
+> A Vue.js Instant Chat for after promo launch interaction
 
 ## Build Setup
 
