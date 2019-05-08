@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spinoff Millionaires</title>
+    <link id="favicon2" rel="shortcut icon" type="image/png" href="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/branding_assets/STYLES_ASSETS/SFP_favicon.png">
+<style>
+    .wrapper {
+      border: 1px solid #e1e1e1;
+      -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    h1 {
+      text-align: center;
+      color: #010120;
+      font-family: 'Exo';
+    }
+
+    .inner {
+      padding: 30px;
+    }
+
+    .centered {
+      display: block;
+      text-align: center;
+    }
+
+    #frame {
+      width: 100%;
+      height: 290px;
+      border: 0;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #sms__container {
+      background: #010120;
+      border: thin grey solid;
+      width: 100%;
+      padding: 0 14px;
+      font-family: 'Exo';
+    }
+
+    #sms__container p {
+      text-align: center;
+      color: #e2ca2b;
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 10px;
+      margin: 0 18px;
+      font-family: sans-serif;
+      overflow: hidden;
+      font-family: 'Exo';
+    }
+
+    .topnav {
+      overflow: hidden;
+      color: #f2f2f2;
+      background-color: #010120;
+      font-family: 'Exo';
+      font-size: 17px;
+      font-weight: bold;
+      border: 1px solid white;
+
+    }
+
+    #unlock1,
+    #unlock2,
+    #unlock3,
+    #unlock4,
+    #unlock5,
+    #unlock6,
+    #unlock7,
+    #unlock8 {
+      display: none;
+    }
+
+    .topnav a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-family: 'Exo';
+      font-size: 17px;
+      font-weight: bold;
+      border: 1px solid white;
+      width: 100%;
+      display: block
+    }
+
+    .topnav a:hover {
+      background-color: #2d3599;
+      color: #f2f2f2;
+      font-family: 'Exo';
+      font-size: 17px;
+      font-weight: bold;
+      color: black;
+      border: 1px solid white;
+
+    }
+
+    .topnav a.active {
+      background-color: #2d3599;
+      font-family: 'Exo';
+      font-size: 17px;
+      font-weight: bold;
+      color: #f2f2f2;
+      border: 1px solid white;
+
+    }
+
+    .liveEvent {
+
+      width: 50%;
+      height: 100%;
+      display: none;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+    }
+
+    .liveEvent a {
+      background-color: #010120;
+      text-align: center;
+      padding: 10px 24px;
+      font-family: 'Exo';
+      font-size: 26px;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .liveEvent a:hover {
+      background-color: #2d3599;
+      color: #f2f2f2;
+      font-family: 'Exo';
+      font-size: 26px;
+      font-weight: bold;
+
+    }
+
+    #day1image, #day2image,#day3image, #day4image, #day5image, #day6image, #day7image, #day8image{
+      width:80%; margin: 0 auto; display:block;
+    }
+
+    /*----------=============  Countdown Clock + Things  =============--------*/
+
+    .clockwrapper {
+      font-family: 'Lato', sans-serif;
+      color: #fff;
+      display: block;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    #clock div {
+      display: inline-block;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+
+    .daySubtitle {
+      font-size: 1.2rem;
+      color: #2d3599;
+      text-align: center;
+      padding-top: 15px;
+      display: block;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .days {
+      color: #8c1d15;
+      padding: 10px 15px;
+      font-family: 'Lato', sans-serif;
+      border-radius: 5px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .hours {
+      color: #8c1d15;
+      padding: 10px 15px;
+      font-family: 'Lato', sans-serif;
+      border-radius: 5px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .hoursSubtitle {
+      font-size: 1.2rem;
+      color: #2d3599;
+      text-align: center;
+      padding-top: 15px;
+      display: block;
+      font-size: bold;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .minutes {
+      padding: 10px 15px;
+      color: #8c1d15;
+      font-family: 'Lato', sans-serif;
+      border-radius: 5px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .minutesSubtitle {
+      font-size: 1.2rem;
+      color: #2d3599;
+      text-align: center;
+      padding-top: 15px;
+      display: block;
+      font-size: bold;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .seconds {
+      padding: 10px 15px;
+      color: #8c1d15;
+      font-family: 'Lato', sans-serif;
+      border-radius: 5px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    .secondsSubtitle {
+      font-size: 1.2rem;
+      color: #2d3599;
+      text-align: center;
+      padding-top: 15px;
+      display: block;
+      font-weight: bold;
+      font-family: 'Exo';
+    }
+
+    h3 {
+      text-align: center;
+      color: #010120;
+      font-family: 'Exo';
+    }
+  h4 {
+      text-align: center;
+      color: #010120;
+      font-family: 'Exo';
+    }
+
+       .center {text-align:center;}
+  img.center {display: block; margin: 0 auto;}
+      font-family: {'Exo';}
+
+
+    /*----------=============  Countdown Clock + Things  =============--------*/
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+  <script>
+    var imprint = "SFP";
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5R7GC3J');
+  </script>
+  <!-- End Google Tag Manager -->
+
+<div class="wrapper">  <div class="dayWrapper">
+    <div id="day1Wrapper">
+
+         <h3>Day One Coming Soon!</h3></div>
+      <img id="day1image"  src="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/PUBS/POT/POT_ElectionNight_1118/POT_ElectionNight_LockPlaceholder.png" />
+
+    <div id="unlock1" style="padding-left:25px;padding-right:25px;">
+     <center>
+                <a href="day1.html">
+                    <h3><u>Day #1</u></h3>
+                </a>
+            </center>
+
+    </div>
+  <hr>
+    <div id="day2Wrapper">
+      <h3>Day Two Coming Soon!</h3>
+      <img id="day2image" src="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/PUBS/POT/POT_ElectionNight_1118/POT_ElectionNight_LockPlaceholder.png" />
+    </div>
+    <div id="unlock2" style="padding-left:25px;padding-right:25px;">
+      <center>
+                <a href="day2.html">
+                    <h3><u>
+       Day #2 -
+     </u></h3>
+                </a>
+            </center>
+
+    </div>
+      <hr>
+    <div id="day3Wrapper">
+      <h3>Day Three Coming Soon!</h3>
+      <img id="day3image"src="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/PUBS/POT/POT_ElectionNight_1118/POT_ElectionNight_LockPlaceholder.png" />
+
+    </div>
+    <div id="unlock3" style="padding-left:25px;padding-right:25px;">
+      <center>
+                <a href="day3.html">
+                    <h3><u>Day #3</u></h3>
+                </a>
+          </center>
+           </div>
+  <hr>
+    <div id="day4Wrapper">
+      <h3>Day Four Coming Soon!</h3>
+      <img id="day4image" src="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/PUBS/POT/POT_ElectionNight_1118/POT_ElectionNight_LockPlaceholder.png" />
+
+    </div>
+    <div id="unlock4" style="padding-left:25px;padding-right:25px;">
+         <center>
+                <a href="day4.html">
+                    <h3><u>Day #4</u></h3>
+                </a>
+          </center>
+
+    </div>
+      <hr>
+    <div id="day5Wrapper">
+      <h3>Day Five Coming Soon!</h3>
+      <img id="day5image" src="https://d13p2xj50zkyqm.cloudfront.net/promos/SFP/PUBS/POT/POT_ElectionNight_1118/POT_ElectionNight_LockPlaceholder.png" />
+
+    </div>
+    <div id="unlock5" style="padding-left:25px;padding-right:25px;">
+            <center>
+                <a href="day5.html">
+                    <h3><u>Day #5</u></h3>
+                </a>
+          </center>
+  </div>
+    </div></div>
+
+  <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/countdown.js"></script>
+  <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/moment.js"></script>
+  <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/moment-timezone-with-data.min.js"></script>
+  <!--========= 2 step  =========-->
+  <script>
+    function ePop() {
+      var eventPop = moment.tz("2018-11-06 19:50", "America/New_York");
+
+      $('#clock').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+          $('.clockwrapper').hide();
+          $('.liveEvent').css('display', 'block');
+        });
+      });
+    }
+
+    ePop();
+
+    function fPop() {
+      var eventPop = moment.tz("2018-10-30 10:00", "America/New_York");
+
+      $('#clock1').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+                $('#day1Wrapper').hide();
+          $('#day1image').hide();
+          $('#unlock1').css('display', 'block');
+        });
+      });
+    }
+
+    fPop();
+
+    function gPop() {
+      var eventPop = moment.tz("2018-10-31 10:00", "America/New_York");
+
+      $('#clock2').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+          $('#day2Wrapper').hide();
+            $('#day2image').hide();
+          $('#unlock2').css('display', 'block');
+        });
+      });
+    }
+
+    gPop();
+
+    function hPop() {
+      var eventPop = moment.tz("2018-11-01 10:00", "America/New_York");
+
+      $('#clock3').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+          $('#day3Wrapper').hide();
+            $('#day3image').hide();
+          $('#unlock3').css('display', 'block');
+        });
+      });
+    }
+
+    hPop();
+
+    function iPop() {
+      var eventPop = moment.tz("2018-11-02 10:00", "America/New_York");
+
+      $('#clock4').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+          $('#day4Wrapper').hide();
+            $('#day4image').hide();
+          $('#unlock4').css('display', 'block');
+        });
+      });
+    }
+
+    iPop();
+
+    function jPop() {
+      var eventPop = moment.tz("2018-11-03 10:00", "America/New_York");
+
+      $('#clock5').countdown(eventPop.toDate(), function(event) {
+        var t = $(this).html(event.strftime('' +
+          '<div><span class="days">%D</span><br/><span class="daySubtitle">Days</span></div>' +
+          '<div><span class="hours">%H</span><br/><span class="hoursSubtitle">Hours</span></div>' +
+          '<div><span class="hours">%M</span><br/><span class="minutesSubtitle">Minutes</span></div>' +
+          '<div><span class="seconds">%S</span><br/><span class="secondsSubtitle">Seconds</span></div>')).on('finish.countdown', function() {
+          $('#day5Wrapper').hide();
+            $('#day5image').hide();
+          $('#unlock5').css('display', 'block');
+        });
+      });
+    }
+
+    jPop();
+
+
+  </script>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R7GC3J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
