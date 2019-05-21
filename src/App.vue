@@ -131,11 +131,9 @@ export default {
 .chatbox {
   display: block;
   position: relative;
-  height: 1000px;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
-  overflow-y: scroll;
   padding-bottom: 250px;
 }
 
