@@ -1,6 +1,7 @@
 # Seven Figure Publishing Live Chat
 
 > A Vue.js Instant Chat for after promo launch interaction
+> https://test-7ea39.firebaseapp.com/
 
 ## Build Setup
 
